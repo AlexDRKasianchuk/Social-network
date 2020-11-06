@@ -1,0 +1,17 @@
+
+.nav{
+  padding: 20px;
+  grid-area: nav;
+  background-color: rgb(161, 161, 219);
+}
+.item a{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.item a:hover{
+  color: aqua;
+}
+.item a.active{
+  color:gold;
+}

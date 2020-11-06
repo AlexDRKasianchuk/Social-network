@@ -1,0 +1,11 @@
+.size{
+    height: 120px;
+    width: 100px;
+}
+.selectedPage{
+ font-weight: bold;   
+}
+button,
+span{
+    cursor: pointer;
+}
