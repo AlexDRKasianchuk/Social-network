@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { followAC, setCurrentPageAC, setTotalUsersCountAC, setUsersAC, unfollowAC} from '../../redux/usersReducer';
 import * as axios from 'axios';
 import Users from './Users';
-
+//class component
 class usersContainer extends React.Component {
 
     componentDidMount() {
