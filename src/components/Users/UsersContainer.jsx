@@ -68,6 +68,6 @@ const mapDispatchToProps = (dispatch)=>{
     };
 }
 
-// const UsersContainer = connect(mapStateToProps, mapDispatchToProps)(usersContainer);
+const UsersContainer = connect(mapStateToProps, mapDispatchToProps)(usersContainer);
 
-export default connect(mapStateToProps, mapDispatchToProps)(usersContainer);
+export default UsersContainer;
