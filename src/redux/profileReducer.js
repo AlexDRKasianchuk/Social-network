@@ -1,7 +1,6 @@
 const ADD_POST = 'ADD_POST',
     UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT',
-    SET_USER_PROFILE = 'SET_USER_PROFILE',
-    SEEE = 'SEEE';
+    SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 let initialState = {
     posts: [{
@@ -46,9 +45,7 @@ const profileReducer = (state = initialState, action) => {
                 profile: action.profile
             }
         }
-        case SEEE:{
-            return state;
-        }
+       
         default:
             return state;
     }
@@ -66,7 +63,5 @@ export const setUserProfile = (profile) => ({
     type: SET_USER_PROFILE,
     profile
 })
-export const seee = () => ({
-    type: SEEE
-})
+
 export default profileReducer;
