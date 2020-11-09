@@ -2,38 +2,47 @@ import * as axios from 'axios';
 import React from 'react';
 import { connect } from 'react-redux';
 import Profile from './Profile';
-import {setUserProfile} from '../../redux/profileReducer';
+import { setUserProfile } from '../../redux/profileReducer';
+import { withRouter } from 'react-router-dom';
 
-class ProfileContainer extends React.Component{
+class ProfileContainer extends React.Component {
 
-      componentDidMount() {
+   componentDidMount() {
+      let userId = this.props.match.params.userId;
 
-         axios.get(`https://social-network.samuraijs.com/api/1.0/profile/2`).then(response => {
-             this.props.setUserProfile(response.data);
-         });
+      //hardcode id 
+      //need login
+      if(!userId){
+         userId =2;
+      }
+      axios.get(`https://social-network.samuraijs.com/api/1.0/profile/` + userId).then(response => {
+         this.props.setUserProfile(response.data);
+      });
 
-        
+
    }
 
-   render(){
-     
-    return(
-      
-      <Profile {...this.props} profile={this.props.profile}/>
-    )
+   render() {
+
+      return (
+
+         <Profile {...this.props} profile={this.props.profile} />
+      )
    }
 }
 
-let mapStateToProps=(state)=>({
+let mapStateToProps = (state) => ({
    profile: state.profilePage.profile
 })
 
-let mapDispatchToProps = (dispatch) =>{
- return {
-  setUserProfile: (profile) => {
-    dispatch(setUserProfile(profile))
-}
- }
+let mapDispatchToProps = (dispatch) => {
+   return {
+      setUserProfile: (profile) => {
+         dispatch(setUserProfile(profile))
+      }
+   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(ProfileContainer);
+let WithURLDataContainerComponent = withRouter(ProfileContainer);
+
+export default connect(mapStateToProps, mapDispatchToProps)(WithURLDataContainerComponent);
