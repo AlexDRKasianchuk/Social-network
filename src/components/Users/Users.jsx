@@ -3,6 +3,7 @@ import s from './Users.module.css';
 import userPhoto from './../../assets/images/Geralt_final.jpg';
 import { NavLink } from 'react-router-dom';
 import { followAPI } from '../../API/api';
+
 let Users = (props) => {
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
@@ -22,29 +23,30 @@ return (
                 <span>
                     <div>
                         <NavLink to={'/profile/' + u.id} >
-                        <img className={s.size} src={u.photos.small != null ? u.photos.small : userPhoto} />
+                        <img className={s.size} src={u.photos.small != null ? u.photos.small : userPhoto} alt="photo_acatar"/>
                         </NavLink>
                     </div>
                     <div>
                         {u.followed
-                            ? <button onClick={() => {
+                            ? <button disabled={props.followingInProgress.some(id=>id===u.id)} onClick={() => {
+                                props.toggleIsFollowingProgress(true,u.id);
                                 followAPI.unfollow(u.id).then(data => {
                                     if(data.resultCode===0){
                                         props.unfollow(u.id) 
                                     }
                                 });
-                               
+                                props.toggleIsFollowingProgress(false);
                             
                             }}>Unfollow</button>
 
-                            : <button onClick={() => {
-                                
+                            : <button disabled={props.followingInProgress.some(id=>id===u.id)} onClick={() => {
+                                props.toggleIsFollowingProgress(true,u.id);
                                 followAPI.follow(u.id).then(data => {
                                     if(data.resultCode===0){
                                         props.follow(u.id) 
                                     }
                                 });
-                                
+                                props.toggleIsFollowingProgress(false);
                                 }}> Follow</button>}
                     </div>
                 </span>
