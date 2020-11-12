@@ -1,18 +1,20 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
 import Preloader from '../../common/preloader/Preloader';
+import ProfileStatus from './ProfileStatus/ProfileStatus';
 
-const ProfileInfo = ({profile}) => {
-if(!profile){
+const ProfileInfo = (props) => {
+if(!props.profile){
   return <Preloader />
 }
   return (
     <div>
-      <div>
+      {/* <div>
         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLaIbprhBGJTkwznDouudeG7Vdz0luBPjH-Q&usqp=CAU' alt='imagesss' />
-      </div>
+      </div> */}
       <div className={s.descriptionBlock}>
-        <img src={profile.photos.large} alt="avatar"/>
+        <img src={props.profile.photos.large} alt="avatar"/>
+        <ProfileStatus {...props} status={'hello'}/>
       </div>
     </div>
   );
