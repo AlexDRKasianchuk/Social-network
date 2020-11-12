@@ -19,13 +19,11 @@ export const usersAPI = {
          return instance.post(`follow/${usersId}`,{}).then(response=>response.data)
      }
 }
-
 export const authAPI = {
     auth(){
         return instance.get(`auth/me`).then(response=>response.data)
     }
 }
-
 export const profileAPI = {
     profile(userId){
         return  instance.get(`profile/` + userId).then(response =>response.data)
@@ -34,7 +32,7 @@ export const profileAPI = {
         return instance.get(`profile/status/`+userId);
     },
     updateStatus(status){
-        return instance.put(`profile/status/`,{status});
+        return instance.put(`profile/status`,{status: status});
     }
 
 
