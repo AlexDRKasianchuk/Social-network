@@ -9,12 +9,10 @@ if(!props.profile){
 }
   return (
     <div>
-      {/* <div>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLaIbprhBGJTkwznDouudeG7Vdz0luBPjH-Q&usqp=CAU' alt='imagesss' />
-      </div> */}
       <div className={s.descriptionBlock}>
         <img src={props.profile.photos.large} alt="avatar"/>
-        <ProfileStatus {...props} status={props.status} updateUserStatus={props.updateUserStatus}/>
+        <ProfileStatus {...props} status={props.status} updateUserStatus={props.updateUserStatus} myId={props.myId}/>
+          <div>{props.profile.fullName}</div>
       </div>
     </div>
   );

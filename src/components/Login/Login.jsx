@@ -5,7 +5,7 @@ import { Field, reduxForm } from 'redux-form';
 const LoginForm = (props) => {
     return <form onSubmit={props.handleSubmit}>
         <div>
-        <label htmlFor="Login">Login </label>
+        <label htmlFor="Login">Login</label>
             <Field name={"login"} placeholder={"Login"} component={'input'} />
         </div>
         <div>
