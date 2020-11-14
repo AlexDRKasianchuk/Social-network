@@ -32,4 +32,4 @@ let mapStateToProps = (state) => ({
    status: state.profilePage.status
 })
 
-export default compose(connect(mapStateToProps, {userProfile,updateUserStatus,getUserStatus}),withRouter)(ProfileContainer)
+export default compose(connect(mapStateToProps, {userProfile,updateUserStatus,getUserStatus}),withRouter,withAuthRedirect)(ProfileContainer)

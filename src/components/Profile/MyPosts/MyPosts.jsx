@@ -5,7 +5,6 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
 	let onSubmit = (dataForm) => {
-		console.log(dataForm);
 		props.onAddPost(dataForm.postText);
 	}
 	return (
