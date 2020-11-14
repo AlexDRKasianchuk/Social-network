@@ -13,8 +13,9 @@ return (
     <div>
         <div>
             {pages.map(p => {
-                return <span 
-               onClick={()=>{props.onPageChanged(p)}} className={props.currentPage === p && s.selectedPage}>{p}</span>
+                return <span onClick={()=>{props.onPageChanged(p)}} className={props.currentPage === p && s.selectedPage}>
+                   {p}
+                   </span>
             })}
         </div>
         {

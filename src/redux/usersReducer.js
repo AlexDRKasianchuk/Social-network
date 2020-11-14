@@ -9,7 +9,7 @@ const FOLLOW = 'FOLLOW',
 
 let initialState = {
     users: [],
-    pageSize: 5,
+    pageSize: 99,
     totalUsersCount: 0,
     currentPage:1,
     isFetching: false,
@@ -111,6 +111,7 @@ export const getUsers = (currentPage,pageSize) => (dispatch) => {
         dispatch(toggleIsFetching(false));
         dispatch(setUsers(data.items));
         dispatch(setTotalUsersCount(data.totalCount));
+        dispatch(setCurrentPage(currentPage));
     });
 }
 export const follow = (id) => (dispatch) => {
