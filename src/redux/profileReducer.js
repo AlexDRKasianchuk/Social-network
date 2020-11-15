@@ -16,7 +16,6 @@ let initialState = {
             likeCount: '1400'
         }
     ],
-    newPostText: 'Enter text',
     profile: null,
     status: ''
 }
@@ -31,8 +30,7 @@ const profileReducer = (state = initialState, action) => {
                     id: 3,
                     message: action.postText,
                     likeCount: 0
-                }],
-                newPostText: ''
+                }]
             };
         }
         case SET_USER_PROFILE: {

@@ -18,8 +18,7 @@ class MyPostsContainer extends React.Component{
 
 const mapStateToProps = (state) => {
 	return {
-		posts: state.profilePage.posts,
-		newPostText: state.profilePage.newPostText
+		posts: state.profilePage.posts
 	}
 }
 

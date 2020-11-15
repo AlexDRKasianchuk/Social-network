@@ -39,8 +39,7 @@ let initialState = {
             id: 3,
             message: 'Hello'
         }
-    ],
-    newMessageText: ''
+    ]
 
 }
 
@@ -54,8 +53,7 @@ const dialogsReducer = (state = initialState, action) => {
                 messages: [...state.messages,{ 
                     id: 4,
                     message: action.messageText
-                }],
-                newMessageText: " "
+                }]
             }; 
 
         }

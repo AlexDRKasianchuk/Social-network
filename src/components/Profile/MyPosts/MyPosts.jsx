@@ -11,7 +11,7 @@ const MyPosts = (props) => {
 			<h3>My posts</h3>
 			<div>
 				<div>
-					<PostReduxForm onSubmit={onSubmit} newPostText={props.newPostText} />
+					<PostReduxForm onSubmit={onSubmit}/>
 				</div>
 
 				<div className={s.posts}>
