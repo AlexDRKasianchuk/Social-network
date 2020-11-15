@@ -7,12 +7,12 @@ const LoginForm = (props) => {
     return <form onSubmit={props.handleSubmit}>
         <div>
         <label htmlFor="Login">Login</label>
-            <Field name={"login"} placeholder={"Login"} component={Input} validate={[requiredField]}/>
+            <Field name={"email"} placeholder={"Login"} component={Input} validate={[requiredField]}/>
         </div>
         <div>
             
         <label htmlFor="Password">Password </label>
-            <Field placeholder={"Password"} name={"password"} component={Input} validate={[requiredField]}/>
+            <Field placeholder={"Password"} type={"password"} name={"password"} component={Input} validate={[requiredField]}/>
         </div>
         <div>
             <Field type={"checkbox"} name={"rememberMe"} component={Input} /> remember me

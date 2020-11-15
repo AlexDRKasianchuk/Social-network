@@ -1,14 +1,20 @@
+import { render } from '@testing-library/react';
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import LoginReduxForm from './LoginForm';
 
 const Login = (props) => {
    let onSubmit = (dataForm) =>{
-       console.log(dataForm);
+      props.login(dataForm.email,dataForm.password,dataForm.rememberMe);
+
    }
-    return <div>
+   if(props.isAuth){
+       return <Redirect to={'/profile'} />
+   }
+    return <>
         <h1>Login</h1>
         <LoginReduxForm onSubmit={onSubmit} />
-    </div>
+    </>
 
 }
 export default Login;
