@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import LoginReduxForm from './LoginForm';
