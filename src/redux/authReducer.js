@@ -39,7 +39,7 @@ export const setUserData = (userId, email, login, isAuth) => ({
 })
 
 export const autorize = () => (dispatch) => {
-    authAPI.auth().then(data => {
+    return authAPI.auth().then(data => {
         if (data.resultCode === 0) {
             let {
                 id,
