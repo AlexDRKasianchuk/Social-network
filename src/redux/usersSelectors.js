@@ -16,3 +16,14 @@ export const getIsFetching = (state) => {
 export const getFollowingInProgress = (state) => {
     return state.usersPage.followingInProgress
 }
+
+// hard selector
+
+//const getUsersSelector = (state) => {
+//     return state.usersPage.users;
+// }
+// export const getUsers = createSelector(getUsersSelector,
+//  getIsFetching
+// (users,isFetching)=>{
+//     return users.filter(u=>true);
+//})
