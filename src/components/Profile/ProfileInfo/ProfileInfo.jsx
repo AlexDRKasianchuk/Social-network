@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
 import Preloader from '../../common/preloader/Preloader';
-import ProfileStatus from './ProfileStatus/ProfileStatus';
 import userPhoto from '../../../assets/images/avatar.png';
+import ProfileStatus from './ProfileStatus/ProfileStutus';
 
 const ProfileInfo = (props) => {
 if(!props.profile){
