@@ -2,7 +2,7 @@ import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 import PostReduxForm from './MyPostsForm';
-const MyPosts = (props) => {
+const MyPosts = React.memo((props) => {
 	let onSubmit = (dataForm) => {
 		props.onAddPost(dataForm.postText);
 	}
@@ -20,7 +20,7 @@ const MyPosts = (props) => {
 			</div>
 		</div>
 	);
-}
+})
 
 
 
