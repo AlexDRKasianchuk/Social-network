@@ -1,0 +1,8 @@
+.selectedPage{
+    font-weight: bold;   
+    color: rgb(2, 252, 56);
+   }
+   button,
+   span{
+       cursor: pointer;
+   }

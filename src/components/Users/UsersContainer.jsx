@@ -17,7 +17,6 @@ class usersContainer extends React.Component {
     }
 
     render() {
-
         return <>
             {this.props.isFetching ?<Preloader /> : null}
             <Users
@@ -46,17 +45,5 @@ const mapStateToProps = (state) => {
         followingInProgress: getFollowingInProgress(state)
     }
 }
-// const mapStateToProps = (state) => {
-
-//     return {
-//         users: state.usersPage.users,
-//         pageSize: state.usersPage.pageSize,
-//         totalUsersCount: state.usersPage.totalUsersCount,
-//         currentPage: state.usersPage.currentPage,
-//         isFetching: state.usersPage.isFetching,
-//         followingInProgress: state.usersPage.followingInProgress
-//     }
-// }
-
 
 export default compose(connect(mapStateToProps,{requestUsers,setCurrentPage,toggleIsFollowingProgress,getUsers,follow,unfollow}),withAuthRedirect)(usersContainer);
