@@ -22,7 +22,7 @@ export const getFollowingInProgress = (state) => {
 //const getUsersSelector = (state) => {
 //     return state.usersPage.users;
 // }
-// export const getUsers = createSelector(getUsersSelector,
+// export const getUsers = createSelector(getUsersSelector,                        //аналог селектора getUsers
 //  getIsFetching
 // (users,isFetching)=>{
 //     return users.filter(u=>true);
