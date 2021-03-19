@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ТЗ
+Створити генератор рівнозначних варіантів задач для статистичного аналізу даних. 
 
-## Available Scripts
+	Передбачається однакове формулювання задач, а різними є набори даних, які отримуються генеруванням випадкових n чисел із заданого числового діапазону [a; b]. Передбачити варіант генерування нормального розподілу та рівномірного.
 
-In the project directory, you can run:
+Користувач задає: кількість варіантів (k), довжину вектора даних (n), перелік необхідних статистик для обчислення.
+На виході отримуються формулювання k задач (однакові), готові до роздрукування (формат  *.doc/*.txt). Задачі відрізняються лише наборами даних. При цьому бажано набір даних мати у 2 форматах текстовому та електронних таблиць.
+Для кожного варіанту обчислити відповіді.
 
-### `npm start`
+Реалізація українською та англійською мовами.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Виконати завдання для теми "Описові статистики однієї змінної".
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Можливе оформлення вікна (UI) для задання вхідних даних: 
+Задати кількість варіантів k –  Поле вводу. Початкове значення – 1.
+Задати об'єм даних n – Поле вводу. Початкове значення – 20.
+Ліва межа даних  a –   Поле вводу з бігунком. Початкове значення – 0.
+Права межа даних b –  Поле вводу з бігунком.  Початкове значення – 20.
+Дані цілі /дійсні  –  Перемикач. Початкове значення – ” цілі”.
+Розподіл випадкових вхідних даних нормальний / рівномірний – Перемикач. Початкове значення – ”нормальний”. 
 
-### `npm test`
+Статистики для обчислення:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Частоти –  Прапорець (так-ні). Початкове значення – ”так”.
+Відносні частоти –  Прапорець.  Початкове значення – ”ні”.
+Середнє – Прапорець.  Початкове значення – ”так”.
+Мода –  Прапорець. Початкове значення – ”ні”.
+Медіана –  Прапорець. Початкове значення – ”ні”.
+Дисперсія –  Прапорець. Початкове значення – ”так”.
+Стандартне відхилення –  Прапорець. Початкове значення – ”ні”.
+Коефіцієнт варіації –  Прапорець. Початкове значення – ”ні”.
+Децильний коефіцієнт – Прапорець. Початкове значення – ”ні”.
+Нижній квартиль –  Прапорець. Початкове значення – ”так”.
+Верхній квартиль –  Прапорець. Початкове значення – ”так”.
+Квантиль рівня p – Прапорець (задати 3 можливості для вказання різних значень p). Початкове значення – ”ні”.
+Довірчий інтервал з надійністю  gamma. Початкове значення – ”ні”.
+Гістограма – Прапорець. Початкове значення – ”так”.
+Кумулята – Прапорець. Початкове значення – ”ні”.
